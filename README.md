@@ -1,4 +1,4 @@
-# Selenium JUnit Web Form Automation
+# Selenium JUnit Web Form Automation & Data Scraping
 
 This project is a Java-based automated test script using **Selenium WebDriver** and **JUnit 5**. 
 It automates the submission of a learner practice web form on the Digital Unite website.
