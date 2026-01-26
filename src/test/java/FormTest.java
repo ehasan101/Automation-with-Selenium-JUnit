@@ -68,8 +68,6 @@ public class FormTest {
 
     @AfterAll
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        driver.quit();
     }
 }
