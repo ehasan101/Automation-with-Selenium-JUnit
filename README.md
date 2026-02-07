@@ -5,7 +5,6 @@ It automates the submission of a learner practice web form and Scrap the table d
 
 ## 1. Webform
 
---- 
 ## Project Overview
 The test covers an end-to-end scenario including:
 1.  Opening the target web form.
