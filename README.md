@@ -1,8 +1,11 @@
 # Selenium JUnit Web Form Automation
 
 This project is a Java-based automated test script using **Selenium WebDriver** and **JUnit 5**. 
-It automates the submission of a learner practice web form on the Digital Unite website.
+It automates the submission of a learner practice web form and Scrap the table data from DSEBD.
 
+## 1. Webform
+
+--- 
 ## Project Overview
 The test covers an end-to-end scenario including:
 1.  Opening the target web form.
@@ -29,6 +32,11 @@ Before running this project, ensure you have the following installed:
 ## Video Demonstration:
 [video_demonstration.mp4](https://drive.google.com/file/d/18GFRjY6227cr2RBalkWD2UvsAATOw_sr/view?usp=drive_link)
 
+
+---
+<!--
+## 2.  Scrap the table data
+--->
 
 
 Author: _@HASAN_
