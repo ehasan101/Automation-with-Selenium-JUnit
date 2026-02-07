@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.time.Duration;
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
 public class FormTest {
 
@@ -26,7 +26,15 @@ public class FormTest {
     @Test
     public void formSubmissionRun() throws InterruptedException {
 
+
         driver.get("https://www.digitalunite.com/practice-webform-learners");
+
+        try {
+            driver.findElement(By.id("ccc-notify-accept")).click();
+            System.out.println("popup found");
+        } catch (Exception e) {
+            System.out.println("no any popup found");
+        }
 
         // 1. Fill Form Details
         driver.findElement(By.id("edit-name")).sendKeys("Test User 01");
@@ -36,40 +44,43 @@ public class FormTest {
         dateField.sendKeys("01/02/2026");
 
         driver.findElement(By.id("edit-email")).sendKeys("test_user_01@mail.net");
-        driver.findElement(By.id("edit-tell-us-a-bit-about-yourself-")).sendKeys("This is a automation test practice.");
+        driver.findElement(By.id("edit-tell-us-a-bit-about-yourself-")).sendKeys("This is a automation testing practice.");
 
         // 2. Upload Document
         WebElement uploadElement = driver.findElement(By.id("edit-uploadocument-upload"));
         File file = new File("src/test/resources/hasan.rtf");
+
         if(file.exists()) {
-            uploadElement.sendKeys(file.getAbsolutePath());
+                uploadElement.sendKeys(file.getAbsolutePath());
         } else {
             System.out.println("File not found for Test upload - skipping upload step");
         }
-        Thread.sleep(1000);
+        Thread.sleep(35000);
 
         // 3. Checkbox
         WebElement checkBoxElement = driver.findElement(By.cssSelector("[type='checkbox']"));
         checkBoxElement.click();
+//      Thread.sleep(1000);
 
         // 4. Submit
         WebElement submitButton = driver.findElement(By.id("edit-submit"));
         submitButton.click();
+        System.out.println("Form submitted successfully!");
 
         // 5. Verification (Assertion)
         WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Thank you for your submission!')]")));
         String actualMessage = successMessage.getText();
-
         Assertions.assertNotNull(successMessage, "Success message element was null");
         Assertions.assertTrue(actualMessage.contains("Thank you for your submission!"),
-                "Registration Unsuccessful!");
+                    "Registration Unsuccessful!");
+        System.out.println("Form submission verified successfully!");
+
     }
 
 
     @AfterAll
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+    public void tearDown () {
+        driver.quit();
     }
+
 }

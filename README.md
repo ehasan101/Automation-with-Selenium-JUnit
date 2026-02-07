@@ -23,3 +23,12 @@ Before running this project, ensure you have the following installed:
 * **IDE:** IntelliJ IDEA, Eclipse, or VS Code.
 
 
+## Report:
+![image](https://drive.google.com/uc?export=view&id=1oQFcf4R11QCnXvZDu-b6l-RPV3Ok8kAO)
+
+## Video Demonstration:
+[video_demonstration.mp4](https://drive.google.com/file/d/18GFRjY6227cr2RBalkWD2UvsAATOw_sr/view?usp=drive_link)
+
+
+
+Author: _@HASAN_
