@@ -13,6 +13,10 @@ dependencies {
     // JUnit 5 BOM
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+
+
 }
 
 test {
