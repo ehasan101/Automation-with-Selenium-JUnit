@@ -32,6 +32,7 @@ Before running this project, ensure you have the following installed:
 [video_demonstration_webForm.mp4](https://drive.google.com/file/d/18GFRjY6227cr2RBalkWD2UvsAATOw_sr/view?usp=drive_link)
 
 
+<!--
 
 ## 2.  Scrap Table Data
 ## Project Overview
@@ -55,7 +56,7 @@ Before running this project, ensure you have the following installed on your mac
 ### Video Demonstration:
 [video_demonstration_DSE.mp4](https://drive.google.com/file/d/1LypsL-lFD6BZ8lSpsqb86LW8ACuf0M9E/view?usp=drive_link)
 
-
+-->
 
 
 ---
